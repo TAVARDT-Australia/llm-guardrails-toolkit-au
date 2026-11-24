@@ -55,7 +55,6 @@ python guardrails_scanner.py -file prompt.txt -json
 
 ## Compliance and Technical Standards
 
-- **Jurisdiction**: Australia
 - **Compliance Standard**: OWASP Top 10 for LLM Applications Standard
 - **Maintaining Organization**: [TAVARDT-Australia](https://github.com/TAVARDT-Australia)
 
@@ -69,3 +68,7 @@ python guardrails_scanner.py -file prompt.txt -json
 
 ### License
 Released under the MIT License. See [LICENSE](LICENSE) for full details.
+
+***
+
+© 2026 TAVARDT. All rights reserved.
