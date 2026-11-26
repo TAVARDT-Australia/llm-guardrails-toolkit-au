@@ -569,6 +569,42 @@
     display: block;
   }
 
+
+    .faq-btn {
+      width: 100%;
+      background: transparent;
+      border: none;
+      padding: 16px 20px;
+      text-align: left;
+      font-size: 0.96rem;
+      font-weight: 600;
+      color: #f1f5f9;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      cursor: pointer;
+    }
+    .faq-btn:hover {
+      background: #0f172a;
+    }
+    .faq-icon {
+      font-size: 1.25rem;
+      color: #839bc8;
+      transition: transform 0.2s ease;
+    }
+    .faq-item.active .faq-icon {
+      transform: rotate(45deg);
+    }
+    .faq-body {
+      display: none;
+      padding: 0 20px 18px;
+      color: #94a3b8;
+      font-size: 0.92rem;
+      line-height: 1.6;
+    }
+    .faq-item.active .faq-body {
+      display: block;
+    }
 </style>
 <style id="tavardt-unified-enterprise-css">
 
@@ -1622,45 +1658,51 @@ footer > div:first-child {
 <h2 class="faq-title">Frequently Asked Questions on LLM Guardrails</h2>
 <div class="faq-list">
 <div class="faq-item">
-<button class="faq-question" onclick="toggleFaq(this)" type="button">
+<button class="faq-btn" onclick="toggleFaq(this)" type="button">
 <span>What latency overhead do edge guardrails introduce?</span>
 <span class="faq-icon">+</span>
 </button>
-<div class="faq-answer">
+<div class="faq-body">
 <p>TAVARDT guardrail models operate with optimized edge runtimes, adding less than 15 milliseconds of latency to standard inference cycles.</p>
 </div>
 </div>
 <div class="faq-item">
-<button class="faq-question" onclick="toggleFaq(this)" type="button">
+<button class="faq-btn" onclick="toggleFaq(this)" type="button">
 <span>How do guardrails detect token smuggling and encoding evasion?</span>
 <span class="faq-icon">+</span>
 </button>
-<div class="faq-answer">
+<div class="faq-body">
 <p>Our multi-tiered classifier normalizes character sets, unpacks base encodings, and evaluates semantic intent rather than relying solely on static keyword lists.</p>
 </div>
 </div>
 <div class="faq-item">
-<button class="faq-question" onclick="toggleFaq(this)" type="button">
+<button class="faq-btn" onclick="toggleFaq(this)" type="button">
 <span>Are guardrails compatible with tool-calling and agentic frameworks?</span>
 <span class="faq-icon">+</span>
 </button>
-<div class="faq-answer">
+<div class="faq-body">
 <p>Yes, TAVARDT guardrails enforce boundary validation across function calls, preventing untrusted model outputs from executing dangerous downstream API calls.</p>
 </div>
 </div>
 <div class="faq-item">
-<button class="faq-question" onclick="toggleFaq(this)" type="button">
+<button class="faq-btn" onclick="toggleFaq(this)" type="button">
 <span>How does TAVARDT implement enterprise guardrails?</span>
 <span class="faq-icon">+</span>
 </button>
-<div class="faq-answer">
+<div class="faq-body">
 <p>We audit your generative AI attack surface, configure customized safety thresholds, integrate low-latency inference proxies, and establish real-time threat telemetry.</p>
 </div>
 </div>
 <div class="faq-item">
-<div class="faq-question"><span>How does TAVARDT implement ultra-low latency guardrails?</span><span class="faq-toggle">+</span></div>
-<div class="faq-answer"><p>TAVARDT deploys serverless guardrails on the Cloudflare global edge network, evaluating prompts and responses in under 15 milliseconds without central bottlenecks.</p></div>
-</div></div>
+<button class="faq-btn" onclick="toggleFaq(this)" type="button">
+<span>How does TAVARDT implement ultra-low latency guardrails?</span>
+<span class="faq-icon">+</span>
+</button>
+<div class="faq-body">
+<p>TAVARDT deploys serverless guardrails on the Cloudflare global edge network, evaluating prompts and responses in under 15 milliseconds without central bottlenecks.</p>
+</div>
+</div>
+</div>
 </section>
 <div class="cta-card">
 <h3>Require Enterprise Guardrails for Production AI?</h3>
